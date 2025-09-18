@@ -42,7 +42,7 @@ function alterarContexto(contexto) {
 			break;
 		case "descanso-longo":
 			titulo.innerHTML = `Hora de voltar à superfície.<br> 
-        <strong class="app__title-strong">Faça uma pausa longo.</strong>`;
+        <strong class="app__title-strong">Faça uma pausa longa.</strong>`;
 			focoBt.classList.remove("active");
 			longoBt.classList.add("active");
 			curtoBt.classList.remove("active");
@@ -52,3 +52,5 @@ function alterarContexto(contexto) {
 			break;
 	}
 }
+
+function playMusic() {}
