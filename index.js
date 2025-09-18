@@ -25,20 +25,27 @@ longoBt.addEventListener("click", (event) => {
 function alterarContexto(contexto) {
 	html.setAttribute("data-contexto", contexto);
 	banner.setAttribute("src", `./imagens/${contexto}.png`);
-	html.setAttribute("app__card-button"), "active";
 	switch (contexto) {
 		case "foco":
 			titulo.innerHTML = `  Otimize sua produtividade,<br>
                 <strong class="app__title-strong">mergulhe no que importa.</strong>`;
-
+			focoBt.classList.add("active");
+			longoBt.classList.remove("active");
+			curtoBt.classList.remove("active");
 			break;
 		case "descanso-curto":
 			titulo.innerHTML = `Que tal dar uma respirada?<br> 
         <strong class="app__title-strong">Faça uma pausa curta!</strong>`;
+			focoBt.classList.remove("active");
+			longoBt.classList.remove("active");
+			curtoBt.classList.add("active");
 			break;
-		case "descanso-longa":
+		case "descanso-longo":
 			titulo.innerHTML = `Hora de voltar à superfície.<br> 
-        <strong class="app__title-strong">Faça uma pausa longa.</strong>`;
+        <strong class="app__title-strong">Faça uma pausa longo.</strong>`;
+			focoBt.classList.remove("active");
+			longoBt.classList.add("active");
+			curtoBt.classList.remove("active");
 			break;
 
 		default:
